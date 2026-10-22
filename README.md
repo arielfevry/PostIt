@@ -1,11 +1,13 @@
 # PostIt - MERN Project Group 4
+## PostIt Backend
 
 ### Initial Setup
 In your terminal directory
 ```
 mkdir PostIt
 cd ./PostIt
-git clone git@github.com:arielfevry/PostIt.git
+git clone git@github.com:arielfevry/postit-backend.git
+git clone 
 ```
 - If you are using WSL, you can then use "code ." to open an IDE like VSCode 
 - If not, you can use your editor from your desktop and use git clone in your workspace
