@@ -32,6 +32,13 @@ git push
 - "style: (formatting, typo changes)"
 - "tests: (adding tests and what they are)"
 
+### Viewing changes locally 
+```bash
+cd postit-frontend
+npm install
+VITE_API_URL=http://localhost:5000 npm run dev
+```
+
 ### Accessing the Droplet
 Since we're not coding directly on the droplet through repo branches, we can SSH as root (Only When Necessary)
 ```
