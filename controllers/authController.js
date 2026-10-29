@@ -1,6 +1,35 @@
 const User = require('../models/User');
 const bcrypt = require('bcryptjs')
 
+// register api (NOT DONE)
+const register = async (req, res) => {
+    try {
+        // Get user information from request
+        const { name, email, password } = req.body || {};
+
+        // Check if all required fields are provided
+        if (
+            typeof name !== 'string' ||
+            !name.trim() ||
+            typeof email !== 'string' ||
+            !email.trim() ||
+            typeof password !== 'string' ||
+            !password
+        ) {
+            return res.status(400).json({
+                error: 'Name, email and password are required'
+            });
+        }
+
+    } catch (error) {
+        console.error('Registration error:', error);
+
+        return res.status(500).json({
+            error: 'Internal server error'
+        });
+    }
+};
+
 //login api
 const login = async(req, res) => {
     try {
@@ -48,4 +77,4 @@ const login = async(req, res) => {
         });
     }
 };
-module.exports = {login};
+module.exports = {login, register};
