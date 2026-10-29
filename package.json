@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/arielfevry/postit-backend#readme",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
     "express": "^5.3.0",
     "mongoose": "^9.11.4"

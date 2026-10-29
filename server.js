@@ -5,6 +5,9 @@ const mongoose = require('mongoose');
 const app = express();
 app.use(cors({ origin: process.env.CORS_ORIGIN || 'http://localhost:5173' }));
 app.use(express.json());
+// login API route
+const authRoutes = require('./routes/auth');
+app.use('/', authRoutes);
 
 //connect mongoDB
 mongoose
